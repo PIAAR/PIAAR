@@ -1,0 +1,55 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+# Load keys into agent
+# Adobe-git
+# ssh-add ~/.ssh/adobe-git
+# Portfolio-git
+ssh-add ~/.ssh/gnu_mac
+
+# Note: PS1 and umask are already set in /etc/profile. You should not
+# need this unless you want different defaults for root.
+# PS1='${debian_chroot:+($debian_chroot)}\h:\w\$ '
+# umask 022
+
+# Add VS Code to PATH for zshell
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s 
+"${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# You may uncomment the following lines if you want `ls' to be colorized:
+#export LS_OPTIONS='--color=auto'
+#eval "$(dircolors)"
+
+# Aliases for file viewing
+#
+alias ls='ls'
+alias ll='ls -l'
+alias la='ls -al'
+#
+# Some more alias to avoid making mistakes:
+#
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+#
+# View this file
+alias bashrc='nano ~/.bashrc'
+alias source='source ~/.zshrc'
+#
+# View other file folders
+alias Desktop='cd ~/Desktop'
+alias Downloads='cd ~/Downloads'
+alias RJ='cd ~/Desktop/RJ_Files'
+alias local_Code='~/Desktop/RJ_Files/Code'
+alias react1='cd ~/Code/Environments/node/react/web-store'
+#
+# Custom aliases for project folders
+
+alias QATest='cd ~/Code/Test_site/QA/'
+alias webDownloads='cd ~/Desktop/YT\ Download/'
+alias portfolio='cd ~/Code/Portfolio/Environments/portfolio/'
+
+export PS1="\[$(tput bold)\]\[\033[38;5;10m\]\d\[$(tput sgr0)\]\[\033[38;5;9m\] \[$(tput 
+sgr0)\]\[\033[38;5;196m\]\h\[$(tput sgr0)\]\n\[$(tput sgr0)\]\[\033[38;5;0m\]\[\033[48;5;11m\]\w\[$(tput sgr0)\]\n\[$(tput sgr0)\]\[\033[38;5;231m\]\[\033[48;5;243m\]\u\[$(tput sgr0)\]\[\033[38;5;9m\]\\\[$(tput sgr0)\]\[\033[38;5;11m\]\[\033[48;5;243m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\]"
