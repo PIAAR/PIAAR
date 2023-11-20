@@ -2,7 +2,7 @@
 - 👀 I’m interested in coding
 - 🌱 I’m currently learning batch files
 - 💞️ I’m looking to collaborate on react pages
-- 📫 How to reach me www.rmasters.group
+- 📫 How to reach me at www.rmoorind.com
 (I just liked the format above... Here's the real read me below)
 
 This is for statup files.
